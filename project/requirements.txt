@@ -1,0 +1,29 @@
+# Reproducible baseline for Windows development.
+# Recommended Python version: 3.10 or 3.11 (avoid 3.13 for this stack).
+
+# ---- Core CV / numeric ----
+numpy==1.26.4
+opencv-python==4.10.0.84
+mediapipe==0.10.14
+Pillow==10.4.0
+
+# ---- Config / utilities ----
+PyYAML==6.0.2
+setuptools==70.3.0
+wheel==0.45.1
+
+# ---- Detection ----
+ultralytics==8.3.20
+
+# ---- Speech / audio ----
+SpeechRecognition==3.10.4
+pyttsx3==2.98
+openai-whisper==20231117
+
+# Optional for microphone capture with SpeechRecognition:
+pyaudio==0.2.14
+
+# ---- API adapter ----
+fastapi==0.115.2
+uvicorn[standard]==0.30.6
+pydantic==2.9.2

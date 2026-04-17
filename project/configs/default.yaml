@@ -1,0 +1,76 @@
+camera:
+  index: 1
+  width: 960
+  height: 540
+
+hand:
+  max_num_hands: 1
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+
+obj:
+  detector: yolo_world
+  min_area: 700
+  yolo_model: yolov8s-world.pt
+  target_class:  # 留空代表检测所有常见物品
+  conf_threshold: 0.24
+  iou_threshold: 0.6
+  imgsz: 640
+  detect_interval_frames: 1
+  temporal_smooth_alpha: 0.65
+  max_lost_frames: 4
+  prompts:
+    - cup
+    - bottle
+    - cell phone
+    - mobile phone
+    - phone
+    - scissors
+    - keyboard
+    - mouse
+    - key
+    - remote
+    - book
+
+guidance:
+  x_threshold: 35
+  y_threshold: 35
+  near_area: 10000
+  far_area: 26000
+
+audio:
+  enabled: true
+  speech_interval_sec: 0.9
+  rate: 150
+  tts_backend: pyttsx3
+  tts_log_events: true
+  reaction_grace_sec: 1.4
+  min_guidance_interval_sec: 1.0
+  guidance_repeat_sec: 2.5
+  recognizer: whisper
+  whisper_model: base
+  language: zh
+  listen_timeout: 15.0
+  phrase_time_limit: 8.0
+  ambient_adjust_sec: 1.2
+  dynamic_energy_threshold: true
+  energy_threshold: 300
+  pause_threshold: 0.8
+  non_speaking_duration: 0.4
+  command_cooldown_sec: 1.2
+  fallback_google: true
+  google_language: zh-CN
+  whisper_beam_size: 5
+  whisper_best_of: 5
+  whisper_temperature: 0.0
+  whisper_initial_prompt: 普通话语音指令，场景是寻物。常见命令：帮我找手机，帮我找杯子，找钥匙，找鼠标。
+
+runtime:
+  draw_debug: true
+  window_name: Grasp Assist Demo
+  display: true
+  record_session: true
+  output_dir: outputs
+  ui_enable_unicode: true
+  ui_font_path: C:/Windows/Fonts/msyh.ttc
+  ui_font_size: 26

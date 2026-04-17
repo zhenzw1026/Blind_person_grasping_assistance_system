@@ -1,0 +1,43 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+
+# Python
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+project/.venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/.turbo/
+frontend/out/
+
+# Local environment files
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+project/.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Runtime outputs
+project/outputs/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
